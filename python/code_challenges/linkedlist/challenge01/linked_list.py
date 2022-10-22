@@ -1,6 +1,5 @@
 from locale import currency
 
-
 class LinkedList:
     """
     the purpose of this class to create singly linked list 
