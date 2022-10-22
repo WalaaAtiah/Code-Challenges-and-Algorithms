@@ -1,1 +1,12 @@
 ![whiteboard image](./whiteboard.png)
+
+
+
+
+
+
+
+
+
+
+
