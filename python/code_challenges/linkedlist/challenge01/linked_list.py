@@ -14,7 +14,7 @@ class LinkedList:
         return "The purpose of this class is to create a singly linked list, append a new node to it, and delete the node from it"
     
     def __repr__(self) -> str:
-        return 'append or delete a node from linkedlist '
+        return 'append a node from linkedlist '
 
     def append(self, node):
         """
@@ -27,24 +27,6 @@ class LinkedList:
             while current.next is not None:
                 current = current.next
             current.next = node
-    def delete(self, value):
-        """
-        the perpose of this method to delete node from  linklist
-        """
-        if self.head is None:
-            return "The linked list is empty"
-        else:
-            current = self.head
-            if current.value==value:
-                self.head=current.next
-            else:
-                while current is not None:
-                    y=current.next
-                    if y.value==value:
-                        current.next=y.next
-                        break              
-                    current = current.next
-
 
     def printAll(self):
         """
@@ -62,3 +44,28 @@ class LinkedList:
                 print(current.value)
                 current = current.next
             return x
+
+# def delete(node):
+#         """
+#         the perpose of this function to delete node from  linklist
+#         """
+#         if node.next==None :
+#             node.value=None
+#         else:    
+#             next_node=node.next
+#             node.value=next_node.value
+#             node.next=next_node.next
+     
+        # if likedlist.head is None:
+        #     return "The linked list is empty"
+        # else:
+        #     current = likedlist.head
+        #     if current.value==value:
+        #         likedlist.head=current.next
+        #     else:
+        #         while current is not None:
+        #             y=current.next
+        #             if y.value==value:
+        #                 current.next=y.next
+        #                 break              
+        #             current = current.next

@@ -2,6 +2,21 @@
 from node import Node
 from linked_list import LinkedList
 
+def delete(node):
+        """
+        the perpose of this function to delete node from  linklist
+        it takes a node as argument
+        the node not a tail node in the list.
+        """
+        if node.next==None :
+            return 
+        else:    
+            next_node=node.next
+            node.value=next_node.value
+            node.next=next_node.next
+     
+
+
 if __name__ == "__main__":
     # creat the linkedlist nodes
     linkedList1 = LinkedList()
@@ -24,6 +39,15 @@ if __name__ == "__main__":
     v=int(input("Enter the value you want to delete\n"))
     print("-------------------- after ----------------")
 
-    linkedList1.delete(v)
+    current=linkedList1.head
+    while True:
+        # print("insid while ")
+        if current.value==v:
+            print("inside if ")
+            nod=current
+            break
+        current=current.next
+
+    delete(nod)
     
     linkedList1.printAll()
