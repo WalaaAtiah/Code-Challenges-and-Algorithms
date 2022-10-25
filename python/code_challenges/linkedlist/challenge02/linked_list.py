@@ -43,6 +43,22 @@ class LinkedList:
                 x.append(current.value)
                 current = current.next
             return x
+    def middel_node(self,mid_node):
+        """
+        Print all node value after the middel node 
+        """
+        if self.head is None:
+            print( "The linked list is empty")
+            return "The linked list is empty"
+        else:
+            current = mid_node
+            # add the value in node inside array "x" to make it easier to test
+            x=[]
+            while current is not None:
+                x.append(current.value)
+                current = current.next
+            print(x)
+            return x
 
 
 
