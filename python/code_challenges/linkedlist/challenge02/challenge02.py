@@ -52,13 +52,14 @@ if __name__ == "__main__":
     node6 = Node(6)
     linkedList1.append(node6)
     print("--------------- first example ------------")
-    print("----------------- linked list ------------")
+    print("-------------input linked list ------------")
     print(linkedList1.printAll())
     #find the middle node in the linkesd list
-    print("-------------- middlen node is ------------")
+    mid=MiddlenNode(linkedList1.head)
+    print(f"-------------- middle node is {mid.value}  ------------")
+    print(f"-------------- output  --------------------")
+    linkedList1.middel_node(mid)
 
-    print(MiddlenNode(linkedList1.head).value)
-    
     #creat the secand linkedlist nodes
     linkedList2 = LinkedList()
     node1 = Node(1)
@@ -76,9 +77,11 @@ if __name__ == "__main__":
     node5 = Node(5)
     linkedList2.append(node5)
     print("--------------- second example ------------")
-    print("----------------- linked list -------------")
+    print("-------------input linked list -------------")
     print(linkedList2.printAll())
     #find the middle node in the linkesd list
-    print("-------------- middlen node is ------------")
 
-    print(MiddlenNode(linkedList2.head).value)
+    mid_node = MiddlenNode(linkedList2.head)
+    print(f"-------------- middle node is {mid_node.value}  ------------")
+    print(f"-------------- output  --------------------")
+    linkedList2.middel_node(mid_node)
