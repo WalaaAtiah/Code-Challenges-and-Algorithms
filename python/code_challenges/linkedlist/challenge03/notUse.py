@@ -3,29 +3,29 @@
 # from node import Node
 # from challenge03 import LinkedList
 
-# def RemoventhNode(head, n: int):
+# def RemoventhNode(ll, n: int):
 #         """
 #         the perpose of this function to remove the nth node from the end of the linkedlist and return its head
 #         it takes a head  of a linked list as argument and the nth 
 #         return the head
 #         """
-#         current =head
+#         current =ll.head
 #         i=0
 #         while current is not None :
 #             i+=1
 #             current=current.next 
-#         print('head inside remove function',head)
+#         print('head inside remove function',ll.head)
 #         if i==0:
 #             return "the linkedlist empty"
 #         elif i==1:
-#             head=None
+#             ll.head=None
 #         elif i==2:
 #             if i-n==1:
-#                 head.next=None
+#                 ll.head.next=None
 #             else:
-#                 head=head.next        
+#                 ll.head=ll.head.next        
 #         elif i>2:
-#             current=head        
+#             current=ll.head        
 #             i-=n
 #             while i>0 :
 #                 current=current.next
@@ -37,14 +37,14 @@
 #                 next.next=None
 #                 next.value=None
 #             else:
-#                 current=head
-#                 next=head.next
+#                 current=ll.head
+#                 next=ll.head.next
 #                 while next.next is not None :
 #                     current=current.next
 #                     next=next.next
 #                 current.next =None
-#         print ('the end of remove function',head)
-#         return head
+#         print ('the end of remove function',ll.head)
+#         return ll.head
         
 
     
@@ -73,7 +73,7 @@
 
 #     n=int(input("*****  Enter the nth node you want to remove it  ******\n***** Not :the nth node from the end of linkedlist ****\n*******************************************************\n >"))
 #     #remove the nth node from the end of the linkedlist
-#     RemoventhNode(linkedList1.head,n)
+#     RemoventhNode(linkedList1,n)
 #     print(f"-------------- output linked list   --------------------")
 #     print(linkedList1.printAll())
 
@@ -90,10 +90,10 @@
 #     print(linkedList2.printAll())
 #     print("*******************************************************")
 
-#     print("*********              nth = 1                **********\n*******************************************************")
+#     print("*********              nth = 2                **********\n*******************************************************")
 #     n=2
 #     #remove the nth node from the end of the linkedlist
-#     linkedList2.head= RemoventhNode(linkedList2.head,n)
+#     RemoventhNode(linkedList2,n)
 #     print("linkedList2.head.value ",linkedList2.head)
 #     print(f"-------------- output linked list   --------------------")
 #     print(linkedList2.printAll())
