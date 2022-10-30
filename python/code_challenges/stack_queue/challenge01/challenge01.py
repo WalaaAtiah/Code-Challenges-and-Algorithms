@@ -25,11 +25,11 @@ class MyQueue :
         """
          to Pushe element value to the back of the queue.
         """
-        if len(self.result)!=0:
+        if len(self.result)!=0 and self.stack1.top is None:
             for i in self.result:
                 self.stack1.push(i)   
         self.result.append(value)
-        self.stack1.push(value)  
+        self.stack1.push(value)
         self.size +=1
 
     def pop(self):
@@ -76,6 +76,12 @@ if __name__ =="__main__":
     queue1.push(2)
     print("queue is: ",queue1.print_as_list())
     queue1.push(3)
+    print("queue is: ",queue1.print_as_list())
+
+    print("queue1.pop() :>> ",queue1.pop())
+    print("queue is: ",queue1.print_as_list())
+    print("queue1.pop() :>> ",queue1.pop())
+
     print("queue is: ",queue1.print_as_list())
 
     print("queue1.peek() : >> ",queue1.peek())
